@@ -19,9 +19,6 @@ export default function Menu() {
             <Link href="/blog">ブログ</Link>
           </li>
           <li>
-            <Link href="/category">カテゴリ一覧</Link>
-          </li>
-          <li>
             <Link href="/about">アバウト</Link>
           </li>
         </ul>
