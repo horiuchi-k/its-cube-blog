@@ -15,6 +15,13 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
       </h2>
       <p>{formatDate(post.date)}</p>
       <p>{post.excerpt}</p>
+      <div className={styles.tags}>
+        {post.tags.map((tag) => (
+          <Link key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`} className={styles.tag}>
+            #{tag}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
