@@ -32,7 +32,10 @@ export const getAllPosts = (): Post[] => {
         content,
       };
     })
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .sort((a, b) => {
+      if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+      return a.slug < b.slug ? 1 : -1;
+    });
 };
 
 export const getPostBySlug = (slug: string): Post | null => {
