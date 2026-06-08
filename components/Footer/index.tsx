@@ -15,7 +15,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <p className={styles.cr}>© ITScube. All Rights Reserved 2024</p>
+      <p className={styles.cr}>© 50代ITエンジニアK. All Rights Reserved 2026</p>
     </footer>
   );
 };
