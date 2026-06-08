@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "50代ITエンジニアのAI実践記",
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
+        <GoogleAnalytics />
         <Header />
         <Hero title="AI実践記" sub="50代ITエンジニアK" />
         {children}
