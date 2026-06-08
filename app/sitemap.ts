@@ -1,29 +1,17 @@
 import type { MetadataRoute } from "next";
-import { getBlogs } from "@/lib/getBlog";
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogs = await getBlogs();
-  const blogUrls = blogs.map((post) => ({
-    url: `https://blog.it-scube.com/blog/${post.id}`,
-    lastModified: new Date(post.publishedAt),
+import { getAllPosts } from "@/lib/getPosts";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts();
+  const postUrls = posts.map((post) => ({
+    url: `https://its-cube.com/blog/${post.slug}`,
+    lastModified: new Date(post.date),
   }));
 
   return [
-    {
-      url: "https://blog.it-scube.com/",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://blog.it-scube.com/about",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://blog.it-scube.com/blog",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://blog.it-scube.com/category",
-      lastModified: new Date(),
-    },
-    ...blogUrls,
+    { url: "https://its-cube.com/", lastModified: new Date() },
+    { url: "https://its-cube.com/about", lastModified: new Date() },
+    { url: "https://its-cube.com/blog", lastModified: new Date() },
+    ...postUrls,
   ];
 }

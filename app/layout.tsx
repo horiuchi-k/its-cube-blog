@@ -5,18 +5,18 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: "IT Scube Blog",
-  description: "ITに関する日々の備忘録",
+  title: "50代ITエンジニアのAI実践記",
+  description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
   openGraph: {
-    title: "IT Scube Blog",
-    description: "ITに関する日々の備忘録",
-    url: "https://blog.it-scube.com/",
+    title: "50代ITエンジニアのAI実践記",
+    description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
+    url: "https://its-cube.com/",
     images: [
       {
-        url: "https://blog.it-scube.com/ogp.png",
+        url: "https://its-cube.com/ogp.png",
         width: 800,
         height: 600,
-        alt: "IT Scube Blog",
+        alt: "50代ITエンジニアのAI実践記",
       },
     ],
   },
@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Header />
-        <Hero title="日々の備忘録" sub="ITScube" />
+        <Hero title="AI実践記" sub="50代ITエンジニアK" />
         {children}
         <Footer />
       </body>

@@ -1,20 +1,20 @@
 import Link from "next/link";
-import type { Blog } from "../../lib/getBlog";
+import type { Post } from "../../lib/getPosts";
 import { formatDate } from "../../lib/formatDate";
 import styles from "./index.module.css";
 
 type BlogCardProps = {
-  blog: Blog;
+  post: Post;
 };
 
-const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   return (
     <div className={styles.blogCard}>
       <h2>
-        <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
       </h2>
-      <p>{formatDate(blog.publishedAt)}</p>
-      <p>{blog.excerpt}</p>
+      <p>{formatDate(post.date)}</p>
+      <p>{post.excerpt}</p>
     </div>
   );
 };
