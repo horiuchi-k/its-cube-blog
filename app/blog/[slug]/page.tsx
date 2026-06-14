@@ -3,6 +3,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { formatDate } from "@/lib/formatDate";
+import rehypeSlug from "rehype-slug";
+import Callout from "@/components/Callout";
+import Note from "@/components/Note";
+
+const components = { Callout, Note };
 
 type Props = { params: { slug: string } };
 
@@ -33,7 +38,11 @@ const BlogArticlePage = ({ params }: Props) => {
           </a>
         ))}
       </div>
-      <MDXRemote source={post.content} />
+      <MDXRemote
+        source={post.content}
+        components={components}
+        options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }}
+      />
     </article>
   );
 };

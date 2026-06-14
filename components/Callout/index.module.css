@@ -1,0 +1,28 @@
+.callout {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 24px 0;
+  line-height: 1.7;
+}
+
+.icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.info {
+  background-color: #eff6ff;
+  border-left: 4px solid #3b82f6;
+}
+
+.tip {
+  background-color: #f0fdf4;
+  border-left: 4px solid #22c55e;
+}
+
+.warning {
+  background-color: #fffbeb;
+  border-left: 4px solid #f59e0b;
+}
