@@ -17,9 +17,25 @@ export const generateStaticParams = () =>
 export const generateMetadata = ({ params }: Props): Metadata => {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
+  const url = `https://blog.its-cube.com/blog/${params.slug}`;
   return {
     title: `${post.title} | 50代ITエンジニアのAI実践記`,
     description: post.excerpt,
+    robots: { index: true, follow: true },
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: "50代ITエンジニアのAI実践記",
+      locale: "ja_JP",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 };
 

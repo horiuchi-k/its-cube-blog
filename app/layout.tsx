@@ -8,18 +8,29 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 export const metadata: Metadata = {
   title: "50代ITエンジニアのAI実践記",
   description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://blog.its-cube.com/" },
   openGraph: {
     title: "50代ITエンジニアのAI実践記",
     description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
-    url: "https://its-cube.com/",
+    url: "https://blog.its-cube.com/",
+    siteName: "50代ITエンジニアのAI実践記",
+    locale: "ja_JP",
+    type: "website",
     images: [
       {
-        url: "https://its-cube.com/ogp.png",
-        width: 800,
-        height: 600,
+        url: "https://blog.its-cube.com/ogp.png",
+        width: 1200,
+        height: 630,
         alt: "50代ITエンジニアのAI実践記",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "50代ITエンジニアのAI実践記",
+    description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
+    images: ["https://blog.its-cube.com/ogp.png"],
   },
 };
 
