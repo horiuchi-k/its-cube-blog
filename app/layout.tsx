@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   title: "50代ITエンジニアのAI実践記",
   description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://blog.its-cube.com/" },
+  alternates: { canonical: "https://blog.hiraku-ai.com/" },
   openGraph: {
     title: "50代ITエンジニアのAI実践記",
     description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
-    url: "https://blog.its-cube.com/",
+    url: "https://blog.hiraku-ai.com/",
     siteName: "50代ITエンジニアのAI実践記",
     locale: "ja_JP",
     type: "website",
     images: [
       {
-        url: "https://blog.its-cube.com/ogp.png",
+        url: "https://blog.hiraku-ai.com/ogp.png",
         width: 1200,
         height: 630,
         alt: "50代ITエンジニアのAI実践記",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "50代ITエンジニアのAI実践記",
     description: "AIを仕事や経営に活かすための実践的な情報を発信します。",
-    images: ["https://blog.its-cube.com/ogp.png"],
+    images: ["https://blog.hiraku-ai.com/ogp.png"],
   },
 };
 

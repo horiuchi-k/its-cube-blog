@@ -17,7 +17,7 @@ export const generateStaticParams = () =>
 export const generateMetadata = ({ params }: Props): Metadata => {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
-  const url = `https://blog.its-cube.com/blog/${params.slug}`;
+  const url = `https://blog.hiraku-ai.com/blog/${params.slug}`;
   return {
     title: `${post.title} | 50代ITエンジニアのAI実践記`,
     description: post.excerpt,
